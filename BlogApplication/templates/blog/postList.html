@@ -1,14 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Post</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProdDev</title>
 </head>
 <body>
-    <h1>Hi</h1>
-    <h1>How</h1>
-    <h1>Are</h1>
-    <h1>You</h1>
-    <h1>Dear</h1>
+<h1><a href = "/">ProdDev</a></h1>
+{% for post in posts %}
+
+<h2>Title: {{post.title}}</h2>
+<time>created on: {{post.createdDate}}</time><br>
+published on : {{post.publishedDate }}<br>
+text: {{post.text}}
+
+{% endfor %}
+
 </body>
 </html>
